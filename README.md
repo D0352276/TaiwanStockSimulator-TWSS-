@@ -35,7 +35,7 @@ CLI的使用方式是撰寫cfg檔，並經由cmd_interface.py解析即可。
 - **紅色虛線:** 持有股票的均價
 - **橘色線(0~1):** 可用金錢的相對值，越靠近1代表越多可用金錢未被投入市場
 
-API界面的範例則寫在api_example.py裡頭，裡面同楊提供了簡潔的demo程式碼，請閱讀並執行以了解使用細節：
+API界面的範例則寫在api_example.py裡頭，裡面提供了簡潔的demo程式碼，請閱讀並執行以了解細節：
 
 >```bash
 >python3 api_example.py
