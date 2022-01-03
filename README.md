@@ -24,9 +24,10 @@ CLI的使用方式是撰寫cfg檔，並經由cmd_interface.py解析即可。
 
 我們已經提供了demo用的cfg，可以藉由觀察cfg的撰寫以及執行以下指令進一步學習如何使用CLI：
 
-```bash
-python3 cmd_interface.py cfg/demo.cfg
-```
+>```bash
+>python3 cmd_interface.py cfg/demo.cfg
+>```
+>
 執行完的輸出圖表如頁首所示。
 - **灰色線:** 每日的收盤價
 - **紅色X:** 買入的時間點
@@ -36,9 +37,9 @@ python3 cmd_interface.py cfg/demo.cfg
 
 API界面的範例則寫在api_example.py裡頭，裡面同楊提供了簡潔的demo程式碼，請閱讀並執行以了解使用細節：
 
-```bash
-python3 api_example.py
-```
+>```bash
+>python3 api_example.py
+>```
 
 ## Customize Your Strategy
 
@@ -46,22 +47,22 @@ python3 api_example.py
 
 這裡展示了定期定額的買入策略：
 
-```Python
-class PerMonthBuying(StrategyBase):
-    def __init__(self,flat_month=3):
-        super(PerMonthBuying,self).__init__()
-        self._flat_month=flat_month
-        self._last_itr_month=None
-    def _Check(self,date,asset,price,metrics,past_price,past_metrics):
-        _year,_month,_day=Date2YMD(date)
-        self._buying_money=(asset["CurrentMoney"]//self._flat_month)*0.95
-        if(self._last_itr_month!=_month):
-            self._last_itr_month=_month
-            if(asset["CurrentMoney"]>0):
-                buy_shares=int(self._buying_money//price)
-                return buy_shares
-        return 0
-```
+>```Python
+>class PerMonthBuying(StrategyBase):
+>    def __init__(self,flat_month=3):
+>        super(PerMonthBuying,self).__init__()
+>        self._flat_month=flat_month
+>        self._last_itr_month=None
+>    def _Check(self,date,asset,price,metrics,past_price,past_metrics):
+>        _year,_month,_day=Date2YMD(date)
+>        self._buying_money=(asset["CurrentMoney"]//self._flat_month)*0.95
+>        if(self._last_itr_month!=_month):
+>            self._last_itr_month=_month
+>            if(asset["CurrentMoney"]>0):
+>                buy_shares=int(self._buying_money//price)
+>                return buy_shares
+>        return 0
+>```
 
 需要注意的是_Check(...)的接口必須維持一致不得任意改變，傳入值分別代表的意義如下：
 
@@ -74,14 +75,14 @@ class PerMonthBuying(StrategyBase):
 函數_Check(...)回傳值為正/負整數，分別代表買入或賣出整數股。
 
 自定義的strategy必須為一個單獨的.py檔案並放置在strategy資料夾中，如此一來就可以在API或CLI界面直接呼叫使用了。
-```Python
-#API
-from strategy import YourStrategy
-```
+>```Python
+>#API
+>from strategy import YourStrategy
+>```
 
-```bash
-#cfg of CLI
-strategy_list=["YourStrategy"]
-```
+>```bash
+>#cfg of CLI
+>strategy_list=["YourStrategy"]
+>```
 
 ## More Info
