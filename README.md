@@ -10,7 +10,7 @@ TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，T
 
 
 ## Quick Start
-```py
+```bash
 #Predict
 python3 main.py -p cfg/predict_coco.cfg
 
@@ -28,7 +28,7 @@ python3 main.py -ce cfg/eval_coco.cfg
 
 這裡展示了定期定額的買入策略：
 
-```bash
+```Python
 class PerMonthBuying(StrategyBase):
     def __init__(self,flat_month=3):
         super(PerMonthBuying,self).__init__()
