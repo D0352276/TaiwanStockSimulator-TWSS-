@@ -8,8 +8,6 @@ TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，T
 <div align=center>
 <img src=https://github.com/D0352276/TaiwanStockSimulator-TWSS-/blob/main/demo/logs.png width=100% />
 </div>
-
-
 ## Requirements
 
 - [Python 3](https://www.python.org/)
