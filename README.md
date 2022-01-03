@@ -1,6 +1,13 @@
 # TaiwanStockSimulator-TWSS-
 
-TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，TWSS提供了一套簡潔的API使撰寫並測試自定義的交易策略變得十分容易。
+![](https://img.shields.io/badge/Python-3-blue)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+
+TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，TWSS提供了簡潔的API使撰寫並測試自定義交易策略變得十分容易。
+<div align=center>
+<img src=https://github.com/D0352276/TaiwanStockSimulator-TWSS-/blob/main/demo/logs.png width=100% />
+</div>
+
 
 ## Requirements
 
@@ -11,14 +18,7 @@ TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，T
 
 ## Quick Start
 ```bash
-#Predict
-python3 main.py -p cfg/predict_coco.cfg
-
-#Train
-python3 main.py -t cfg/train_coco.cfg
-
-#Eval
-python3 main.py -ce cfg/eval_coco.cfg
+python3 cmd_interface.py cfg/demo.cfg
 ```
 
 
