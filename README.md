@@ -10,7 +10,7 @@ TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，T
 
 
 ## Quick Start
-```python
+```py
 #Predict
 python3 main.py -p cfg/predict_coco.cfg
 
