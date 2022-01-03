@@ -5,9 +5,11 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
 TWSS是一個基於台股每日收盤價回測程式交易策略的模擬器，TWSS提供了簡潔的API以及CLI使撰寫自定義交易策略並測試變得十分容易。
+
 <div align=center>
 <img src=https://github.com/D0352276/TaiwanStockSimulator-TWSS-/blob/main/demo/logs.png width=100% />
 </div>
+
 ## Requirements
 
 - [Python 3](https://www.python.org/)
